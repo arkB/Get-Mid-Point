@@ -18,10 +18,11 @@ def get_middle_point(coordinates):
     z = z / len(coordinates)
     return {'lng' : atan2(y,x) * 180 / pi, 'lat' : atan2(z, sqrt(x*x + y*y)) * 180 /pi}
 
-point1 = geocoding.request('武蔵小山駅')
-point2 = geocoding.request('鴨宮駅')
-point3 = geocoding.request('中野島駅')
+point1 = geocoding.request('Tokyo station')
+point2 = geocoding.request('Ikebukuro station')
+point3 = geocoding.request('Shibuya station')
 middle_cord = get_middle_point([point1.data[0]['geometry']['location'], point2.data[0]['geometry']['location'], point3.data[0]['geometry']['location']])
-stations = placesearch.get_nearest_station(middle_cord, key='AIzaSyD9W-6YNcXzEd3EJDiYmx3qBj8qWrD2F1I')
+stations = placesearch.get_nearest_station(middle_cord, key='XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 print stations
+

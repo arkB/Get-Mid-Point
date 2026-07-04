@@ -25,7 +25,7 @@ class NearestStation(object):
         for result in self.data:
             names = names + result['name'] + '\n'
         return names
-    
+
     if sys.version_info[0] >= 3:  # Python 3
         def __str__(self):
             return self.__unicode__()
